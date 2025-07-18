@@ -30,7 +30,6 @@ const translations = {
     nav: {
       coreValues: "About",
       features: "Features",
-      technology: "Technology",
       download: "Download",
     },
     hero: {
@@ -38,7 +37,7 @@ const translations = {
       subtitle: "Ultimate GPS Drive Logger for iOS",
       description:
         "Beautifully record and preserve your driving experiences forever. The perfect companion for drive enthusiasts who want to capture every journey.",
-      downloadApp: "Download on App Store",
+      downloadApp: "Join Beta Test",
       watchDemo: "Watch Demo",
       rating: "4.9 rating",
       downloads: "50K+ downloads",
@@ -89,39 +88,14 @@ const translations = {
         },
       ],
     },
-    technology: {
-      title: "Built with Latest iOS Technology",
-      subtitle:
-        "Leveraging cutting-edge iOS 18.5 features for the best experience",
-      items: [
-        {
-          title: "iOS 18.5 Optimized",
-          description:
-            "Uses latest CLLocationUpdate & CLBackgroundActivitySession",
-        },
-        {
-          title: "Apple Certified",
-          description: "App Store approved with highest quality standards",
-        },
-        {
-          title: "Privacy First",
-          description:
-            "iCloud-based storage keeps your data completely private",
-        },
-        {
-          title: "Offline Ready",
-          description: "Continue recording even without cellular connection",
-        },
-      ],
-    },
+
     download: {
-      title: "Start Recording Your Drive Adventures",
-      subtitle:
-        "Join thousands of drive enthusiasts who trust Drive.log with their precious memories",
-      appStore: "Download on App Store",
+      title: "Join the Beta Test",
+      subtitle: "Help us perfect Drive.log by joining our beta testing program",
+      appStore: "Join Beta Test",
       requirements: "Requires iOS 18.5 or later",
-      free: "Free Download",
-      note: "iOS Exclusive - Optimized for iPhone, iPad, and Apple Watch",
+      free: "Free Beta Access",
+      note: "Beta Testing via TestFlight - iPhone",
     },
     footer: {
       copyright: "© 2025 Drive.log. All rights reserved.",
@@ -134,7 +108,6 @@ const translations = {
     nav: {
       coreValues: "概要",
       features: "機能",
-      technology: "技術",
       download: "ダウンロード",
     },
     hero: {
@@ -142,7 +115,7 @@ const translations = {
       subtitle: "究極のGPSドライブログ記録アプリ",
       description:
         "あなたのドライブ体験を美しく記録し、思い出として永続的に保存。ドライブ愛好家のための完璧なコンパニオンアプリです。",
-      downloadApp: "App Storeでダウンロード",
+      downloadApp: "βテストに参加",
       watchDemo: "デモを見る",
       rating: "4.9の評価",
       downloads: "5万+ ダウンロード",
@@ -190,36 +163,15 @@ const translations = {
         },
       ],
     },
-    technology: {
-      title: "最新iOS技術で構築",
-      subtitle: "最先端のiOS 18.5機能を活用した最高の体験を提供",
-      items: [
-        {
-          title: "iOS 18.5最適化",
-          description:
-            "最新のCLLocationUpdate & CLBackgroundActivitySessionを使用",
-        },
-        {
-          title: "Apple認証済み",
-          description: "App Store審査通過の最高品質基準をクリア",
-        },
-        {
-          title: "プライバシー重視",
-          description: "iCloudベースでデータを完全にプライベート保護",
-        },
-        {
-          title: "オフライン対応",
-          description: "電波圏外でも記録継続可能",
-        },
-      ],
-    },
+
     download: {
-      title: "ドライブアドベンチャーの記録を始めよう",
-      subtitle: "大切な思い出をDrive.logに託す数千人のドライブ愛好家に仲間入り",
-      appStore: "App Storeでダウンロード",
+      title: "βテストに参加しよう",
+      subtitle:
+        "Drive.logの完成度向上にご協力ください。βテストプログラムに参加してください",
+      appStore: "βテストに参加",
       requirements: "iOS 18.5以降が必要",
-      free: "無料ダウンロード",
-      note: "iOS専用 - iPhone、iPad、Apple Watch最適化",
+      free: "無料βアクセス",
+      note: "TestFlightによるβテスト - iPhoneに対応",
     },
     footer: {
       copyright: "© 2025 Drive.log. All rights reserved.",
@@ -279,7 +231,6 @@ function VercelTabs({
   const tabs = [
     { id: "coreValues", label: t.nav.coreValues },
     { id: "features", label: t.nav.features },
-    { id: "technology", label: t.nav.technology },
     { id: "download", label: t.nav.download },
   ];
 
@@ -428,6 +379,12 @@ function AppContent() {
                 <Button
                   size="lg"
                   className="text-base px-8 bg-blue-800 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500"
+                  onClick={() =>
+                    window.open(
+                      "https://testflight.apple.com/join/3gUvySTe",
+                      "_blank"
+                    )
+                  }
                 >
                   <Download className="mr-2 h-5 w-5" />
                   {t.hero.downloadApp}
@@ -446,7 +403,7 @@ function AppContent() {
                     <img
                       src="/screenshots/screen-shot-hero.png"
                       alt="Drive.log App Screenshot"
-                      className="w-full h-full object-cover rounded-[2.5rem]"
+                      className="w-full h-full object-contain rounded-[2.5rem]"
                     />
                   </div>
 
@@ -555,44 +512,6 @@ function AppContent() {
         </div>
       </section>
 
-      {/* Technology Section */}
-      <section id="technology" className="py-20">
-        <div className="container px-4">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold">
-              {t.technology.title}
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              {t.technology.subtitle}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {t.technology.items.map((tech, index) => {
-              const icons = [Smartphone, Shield, Cloud, MapPin];
-              const Icon = icons[index];
-
-              return (
-                <Card
-                  key={index}
-                  className="border-0 shadow-sm hover:shadow-md transition-shadow text-center"
-                >
-                  <CardContent className="p-6 space-y-4">
-                    <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-xl flex items-center justify-center mx-auto">
-                      <Icon className="w-6 h-6 text-orange-600 dark:text-orange-400" />
-                    </div>
-                    <h3 className="text-lg font-semibold">{tech.title}</h3>
-                    <p className="text-muted-foreground text-sm">
-                      {tech.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* Download Section */}
       <section
         id="download"
@@ -611,6 +530,12 @@ function AppContent() {
               <Button
                 size="lg"
                 className="text-base px-8 bg-white text-blue-800 hover:bg-blue-50"
+                onClick={() =>
+                  window.open(
+                    "https://testflight.apple.com/join/3gUvySTe",
+                    "_blank"
+                  )
+                }
               >
                 <Download className="mr-2 h-5 w-5" />
                 {t.download.appStore}
@@ -635,10 +560,12 @@ function AppContent() {
         <div className="container px-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex items-center space-x-2">
-              <div className="h-6 w-6 rounded bg-gradient-to-br from-blue-800 to-blue-600 flex items-center justify-center">
-                <MapPin className="h-3 w-3 text-white" />
-              </div>
-              <span className="font-semibold text-blue-800 dark:text-blue-400">
+              <img
+                src="/icons/app-icon.png"
+                alt="Drive.log App Icon"
+                className="h-6 w-6 rounded"
+              />
+              <span className="font-semibold text-gray-700 dark:text-gray-300">
                 {t.hero.title}
               </span>
             </div>
