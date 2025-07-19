@@ -393,10 +393,10 @@ function AppContent() {
             </div>
 
             {/* App Screenshot with iPhone Frame */}
-            <div className="relative flex justify-center lg:justify-end">
-              <div className="relative">
+            <div className="relative flex justify-center lg:justify-center">
+              <div className="relative max-w-xs">
                 {/* iPhone Frame */}
-                <div className="relative w-72 h-[580px] bg-black rounded-[3rem] p-2 shadow-2xl">
+                <div className="relative w-fit h-fit bg-black rounded-[3rem] p-2 shadow-2xl transform scale-75sur">
                   {/* Screen Area */}
                   <div className="w-full h-full bg-white dark:bg-gray-900 rounded-[2.5rem] overflow-hidden relative">
                     {/* Screenshot Image */}
@@ -412,10 +412,10 @@ function AppContent() {
                 </div>
 
                 {/* Floating Elements */}
-                <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl shadow-lg flex items-center justify-center">
+                <div className="absolute -top-2 -right-2 w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-2xl shadow-lg flex items-center justify-center">
                   <Clock className="w-8 h-8 text-white" />
                 </div>
-                <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl shadow-lg flex items-center justify-center">
+                <div className="absolute -bottom-2 -left-2 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl shadow-lg flex items-center justify-center">
                   <MapPin className="w-6 h-6 text-white" />
                 </div>
               </div>
