@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { useLanguage } from "@/components/language-provider";
 import { Card, CardContent } from "@/components/ui/card";
 import { Moon, Sun, ArrowLeft } from "lucide-react";
 import { useTheme } from "next-themes";
@@ -255,7 +256,7 @@ Please understand that no internet transmission or electronic storage is complet
 };
 
 export default function PrivacyPage() {
-  const [language, setLanguage] = useState<'ja' | 'en'>('ja');
+  const { language, setLanguage } = useLanguage();
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   const t = translations[language];

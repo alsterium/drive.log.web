@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLanguage } from "@/components/language-provider";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -256,7 +257,7 @@ function VercelTabs({
 
 function AppContent() {
   const [activeTab, setActiveTab] = useState("coreValues");
-  const [language, setLanguage] = useState("en");
+  const { language, setLanguage } = useLanguage();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const t = translations[language as keyof typeof translations];
