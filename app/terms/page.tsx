@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 const translations = {
   ja: {
     title: "利用規約",
-    lastUpdated: "最終更新日：2025年1月",
+    lastUpdated: "最終更新日：2025年8月",
     sections: {
       intro: {
         title: "はじめに",
@@ -68,7 +68,7 @@ const translations = {
   },
   en: {
     title: "Terms of Service",
-    lastUpdated: "Last Updated: January 2025",
+    lastUpdated: "Last Updated: August 2025",
     sections: {
       intro: {
         title: "Introduction",

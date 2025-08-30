@@ -10,48 +10,52 @@ import { Button } from "@/components/ui/button";
 const translations = {
   ja: {
     title: "プライバシーポリシー",
-    lastUpdated: "最終更新日：2025年1月",
+    lastUpdated: "最終更新日：2025年8月",
     sections: {
       intro: {
         title: "はじめに",
         content: "本プライバシーポリシー（「本ポリシー」）は、Drive.log（「当サービス」）における個人情報の取り扱いについて説明するものです。当サービスをご利用いただく際は、本ポリシーに同意いただいたものとみなされます。"
       },
       collected: {
-        title: "収集する情報",
+        title: "データの取り扱い",
         content: `
-当サービスでは、以下の情報を収集いたします：
+当アプリでは、ユーザーのプライバシーを最優先に考え、以下のようにデータを取り扱います：
 
-【位置情報】
+【ローカル保存データ（外部送信されません）】
 • GPS座標データ
 • 移動経路情報
 • 速度・高度データ
 • タイムスタンプ
-
-【写真・メディア】
 • カメラで撮影した写真
 • 写真のメタデータ（撮影日時、位置情報等）
 
-【利用データ】
-• アプリの使用状況
-• 機能の利用履歴
-• エラーログ
+これらのデータは全てお客様のデバイス内にのみ保存され、外部のサーバーに送信されることはありません。
 
-【デバイス情報】
-• デバイス識別子
-• OS バージョン
-• アプリバージョン`
+【分析目的で送信される可能性があるデータ】
+• アプリの使用状況（匿名化）
+• 機能の利用履歴（匿名化）
+• エラーログ
+• デバイス情報（OS バージョン、アプリバージョン等）
+
+これらは最小限の情報のみで、サービス改善と不具合修正のためにのみ使用されます。`
       },
       usage: {
-        title: "情報の利用目的",
+        title: "データの利用目的",
         content: `
-収集した情報は以下の目的で利用いたします：
+データは以下の目的でのみ利用いたします：
 
-• サービスの提供・改善
+【ローカルデータの利用】
 • 運転記録の作成・保存
 • ルート分析・統計情報の提供
+• アプリ機能の提供
+
+これらのデータはお客様のデバイス内でのみ処理され、外部に送信されることはありません。
+
+【送信される匿名データの利用】
+• サービスの改善
 • アプリの不具合修正・機能改善
-• カスタマーサポート
-• 利用規約違反の調査`
+
+送信されるデータは完全に匿名化され、お客様個人を特定できない形でサービス改善にのみ使用されます。`
       },
       sharing: {
         title: "第三者への提供",
@@ -68,10 +72,12 @@ const translations = {
       storage: {
         title: "データの保存と管理",
         content: `
-• データは主にデバイス内に保存され、必要に応じてiCloudに同期されます
-• サーバーには匿名化された統計データのみを保存します
-• セキュリティ対策として、データの暗号化を実施しています
-• 不要となったデータは適切な方法で削除いたします`
+• 位置情報、写真、運転記録等の個人データは全てお客様のデバイス内にのみ保存されます
+• iCloudへの同期は行われません
+• 外部サーバーには一切の個人データを保存しません
+• サーバーには匿名化された統計データのみが送信される可能性があります
+• デバイス内のデータはセキュリティ対策として暗号化されています
+• アプリを削除することで、デバイス内のデータは完全に削除されます`
       },
       rights: {
         title: "ユーザーの権利",
@@ -126,48 +132,52 @@ const translations = {
   },
   en: {
     title: "Privacy Policy",
-    lastUpdated: "Last Updated: January 2025",
+    lastUpdated: "Last Updated: August 2025",
     sections: {
       intro: {
         title: "Introduction",
         content: "This Privacy Policy ('Policy') explains how Drive.log ('the Service') collects, uses, and protects your personal information. By using our Service, you consent to the practices described in this Policy."
       },
       collected: {
-        title: "Information We Collect",
+        title: "Data Handling",
         content: `
-We collect the following types of information:
+We prioritize user privacy and handle data as follows:
 
-【Location Information】
+【Locally Stored Data (Never transmitted externally)】
 • GPS coordinate data
 • Route and travel information
 • Speed and altitude data
 • Timestamps
-
-【Photos & Media】
 • Photos taken with the camera
 • Photo metadata (date, time, location, etc.)
 
-【Usage Data】
-• App usage statistics
-• Feature usage history
-• Error logs
+All this data is stored exclusively on your device and is never transmitted to external servers.
 
-【Device Information】
-• Device identifiers
-• Operating system version
-• App version`
+【Data That May Be Transmitted for Analysis】
+• App usage statistics (anonymized)
+• Feature usage history (anonymized)
+• Error logs
+• Device information (OS version, app version, etc.)
+
+Only minimal information is transmitted, used solely for service improvement and bug fixes.`
       },
       usage: {
-        title: "How We Use Information",
+        title: "How We Use Data",
         content: `
-We use the collected information for the following purposes:
+Data is used only for the following purposes:
 
-• Providing and improving the Service
+【Local Data Usage】
 • Creating and storing driving records
 • Providing route analysis and statistics
-• Fixing bugs and improving features
-• Customer support
-• Investigating violations of terms of service`
+• App functionality provision
+
+This data is processed exclusively on your device and is never transmitted externally.
+
+【Transmitted Anonymous Data Usage】
+• Service improvement
+• Bug fixes and feature improvements
+
+Transmitted data is completely anonymized and used solely for service improvement in a way that cannot identify individual users.`
       },
       sharing: {
         title: "Information Sharing",
@@ -184,10 +194,12 @@ Anonymized statistical data may be used for service improvement analysis.`
       storage: {
         title: "Data Storage and Management",
         content: `
-• Data is primarily stored on your device and synced to iCloud as needed
-• Only anonymized statistical data is stored on our servers
-• We implement data encryption for security
-• Unnecessary data is properly deleted`
+• Location data, photos, driving records, and other personal data are stored exclusively on your device
+• No synchronization to iCloud is performed
+• No personal data is stored on external servers
+• Only anonymized statistical data may be transmitted to servers
+• Data on your device is encrypted for security
+• Uninstalling the app completely removes all device data`
       },
       rights: {
         title: "Your Rights",
