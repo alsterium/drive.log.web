@@ -24,6 +24,7 @@ import {
   Eye,
 } from "lucide-react";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 const translations = {
   en: {
@@ -575,18 +576,18 @@ function AppContent() {
             </p>
 
             <div className="flex space-x-6">
-              <a
-                href="#"
+              <Link
+                href="/privacy"
                 className="text-sm text-muted-foreground hover:text-foreground"
               >
                 {t.footer.privacy}
-              </a>
-              <a
-                href="#"
+              </Link>
+              <Link
+                href="/terms"
                 className="text-sm text-muted-foreground hover:text-foreground"
               >
                 {t.footer.terms}
-              </a>
+              </Link>
               <a
                 href="#"
                 className="text-sm text-muted-foreground hover:text-foreground"
