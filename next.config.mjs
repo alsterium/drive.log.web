@@ -6,9 +6,8 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
-  output: 'export',
-  trailingSlash: true,
-  distDir: 'out',
+  // Removed 'export' output mode for Workers deployment
+  // @opennextjs/cloudflare will handle the build process
   images: {
     unoptimized: true,
   },

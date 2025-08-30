@@ -169,3 +169,6 @@ tasks/
 
 # Local development files
 dev-debug.log
+
+# OpenNext build output
+.open-next/

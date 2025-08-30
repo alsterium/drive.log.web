@@ -1,0 +1,17 @@
+name = "drive-log-web"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+main = ".open-next/worker.js"
+
+[build]
+command = "npm run build:worker"
+
+# Assets configuration for static files
+[assets]
+directory = ".open-next/assets"
+binding = "ASSETS"
+
+# Uncomment and configure KV namespace if needed for caching
+# [[kv_namespaces]]
+# binding = "CACHE"
+# id = "your-kv-namespace-id"
