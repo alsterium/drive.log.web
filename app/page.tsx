@@ -39,7 +39,7 @@ const translations = {
       subtitle: "Ultimate GPS Drive Logger for iOS",
       description:
         "Beautifully record and preserve your driving experiences forever. The perfect companion for drive enthusiasts who want to capture every journey.",
-      downloadApp: "Join Beta Test",
+      downloadApp: "Download App",
       watchDemo: "Watch Demo",
       rating: "4.9 rating",
       downloads: "50K+ downloads",
@@ -81,8 +81,9 @@ const translations = {
             "Detailed graphs for distance, time, speed, and elevation",
         },
         {
-          title: "Smart Search",
-          description: "Find past drives with powerful filtering and tagging",
+          title: "Drive Widgets",
+          description:
+            "Start and stop new recordings instantly from your home screen",
         },
         {
           title: "Export & Share",
@@ -92,12 +93,12 @@ const translations = {
     },
 
     download: {
-      title: "Join the Beta Test",
-      subtitle: "Help us perfect Drive.log by joining our beta testing program",
-      appStore: "Join Beta Test",
+      title: "Download Drive.log",
+      subtitle: "Experience the complete Drive.log app on your iPhone today",
+      appStore: "Download on the App Store",
       requirements: "Requires iOS 18.5 or later",
-      free: "Free Beta Access",
-      note: "Beta Testing via TestFlight - iPhone",
+      free: "Free Download",
+      note: "Official App Store release - iPhone",
     },
     footer: {
       copyright: "© 2025 Drive.log. All rights reserved.",
@@ -117,7 +118,7 @@ const translations = {
       subtitle: "究極のGPSドライブログ記録アプリ",
       description:
         "あなたのドライブ体験を美しく記録し、思い出として永続的に保存。ドライブ愛好家のための完璧なコンパニオンアプリです。",
-      downloadApp: "βテストに参加",
+      downloadApp: "アプリをダウンロード",
       watchDemo: "デモを見る",
       rating: "4.9の評価",
       downloads: "5万+ ダウンロード",
@@ -156,8 +157,9 @@ const translations = {
           description: "距離、時間、速度、高度の詳細グラフを表示",
         },
         {
-          title: "スマート検索",
-          description: "強力なフィルタリングとタグで過去のドライブを簡単検索",
+          title: "ドライブウィジェット",
+          description:
+            "ホーム画面のウィジェットからワンタップで記録の開始・停止が可能",
         },
         {
           title: "エクスポート・共有",
@@ -167,13 +169,12 @@ const translations = {
     },
 
     download: {
-      title: "βテストに参加しよう",
-      subtitle:
-        "Drive.logの完成度向上にご協力ください。βテストプログラムに参加してください",
-      appStore: "βテストに参加",
+      title: "Drive.logをダウンロード",
+      subtitle: "今すぐDrive.logのすべての機能をiPhoneで体験しよう",
+      appStore: "App Storeでダウンロード",
       requirements: "iOS 18.5以降が必要",
-      free: "無料βアクセス",
-      note: "TestFlightによるβテスト - iPhoneに対応",
+      free: "無料ダウンロード",
+      note: "App Storeで正式リリース - iPhone対応",
     },
     footer: {
       copyright: "© 2025 Drive.log. All rights reserved.",
