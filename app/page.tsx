@@ -384,7 +384,7 @@ function AppContent() {
                   className="text-base px-8 bg-blue-800 hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500"
                   onClick={() =>
                     window.open(
-                      "https://testflight.apple.com/join/3gUvySTe",
+                      "https://apps.apple.com/us/app/drive-log/id6748684990",
                       "_blank"
                     )
                   }
@@ -535,7 +535,7 @@ function AppContent() {
                 className="text-base px-8 bg-white text-blue-800 hover:bg-blue-50"
                 onClick={() =>
                   window.open(
-                    "https://testflight.apple.com/join/3gUvySTe",
+                    "https://apps.apple.com/us/app/drive-log/id6748684990",
                     "_blank"
                   )
                 }
