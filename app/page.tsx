@@ -105,6 +105,7 @@ const translations = {
       privacy: "Privacy Policy",
       terms: "Terms of Service",
       support: "Support",
+      x: "X (Twitter)",
     },
   },
   ja: {
@@ -181,6 +182,7 @@ const translations = {
       privacy: "プライバシーポリシー",
       terms: "利用規約",
       support: "サポート",
+      x: "X（旧Twitter）",
     },
   },
 };
@@ -595,6 +597,14 @@ function AppContent() {
                 className="text-sm text-muted-foreground hover:text-foreground"
               >
                 {t.footer.support}
+              </a>
+              <a
+                href="https://x.com/drivelog_app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-foreground"
+              >
+                {t.footer.x}
               </a>
             </div>
           </div>
